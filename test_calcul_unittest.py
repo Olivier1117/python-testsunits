@@ -57,9 +57,10 @@ class TestCalcul (unittest.TestCase):
     
     # Test de division par 0
     def test_diviser_0(self):
-        self.assertEqual(resultat, resultat_attendu, "Division OK")
+        resultat = self.calc.diviser(6,3)
+
         with self.assertRaises(ZeroDivisionError, msg="Division par zéro impossible"):
-                    self.calc.diviser(5, 0)
+                    resultat
         
         
 # Exécuter les tests si le script est exécuté directement
