@@ -35,9 +35,15 @@ class TestCalcul (unittest.TestCase):
         self.assertEqual(resultat, resultat_attendu, "Addition OK")
     
     # Test de soustraction
-    def test_soustraire(self):
+    def test_soustraire_2_pos(self):
         resultat = self.calc.soustraire(5,3)
         resultat_attendu = 2
+        # test l'égalité
+        self.assertEqual(resultat, resultat_attendu, "Soustraction OK")
+        
+    def test_soustraire_2_neg(self):
+        resultat = self.calc.soustraire(-5,-3)
+        resultat_attendu = -8
         # test l'égalité
         self.assertEqual(resultat, resultat_attendu, "Soustraction OK")
         
